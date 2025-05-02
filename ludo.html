@@ -322,11 +322,11 @@ async function run(pl, tt) {
 
     else if (dice_2 != -1 && _count[pl][tt] > 0) {
         rmoveDouble();
-        await delay(300);
+        await delay(100);
         for (var i = 1; i <= dice_2; i++) {
             _count[pl][tt]++; tic.play();
             a.style = "position:fixed;top:" + y[pl][_count[pl][tt]] + "px;left:" + x[pl][_count[pl][tt]] + "px;";
-            await delay(300);
+            await delay(100);
 
         }
 
@@ -420,7 +420,7 @@ async function on_dice() {
         dice_voice.play();                  // for dice sound play
         var k = d.style.cssText;                //  k for pre css
         d.style = k + "animation-name: dice_ani;";
-        await delay(1000);
+        await delay(500);
         d.style = k;
         dice_check = false;                     // for dice disable
 
@@ -467,7 +467,7 @@ async function player_changer(n, m) {
     }
 
     if (!n) {     // it will false only when the  player have next chance
-        await delay(1500);             /// to change the player
+        await delay(500);             /// to change the player
         if (on_p == 1) { on_p = 2; d.style = "background-color:red;top:40px;left:660px;"; }
         else if (on_p == 2) { on_p = 3; d.style = "background-color:blue;top:710px;left:660px;"; }
         else if (on_p == 3) { on_p = 4; d.style = "background-color:green;top:710px;left:90px;"; }
